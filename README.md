@@ -7,6 +7,12 @@
 ```
 -[ select datname, oid from pg_databse where datname=’db_name’; ]  to get db oid
 -[ select relname, oid from pg_class where relname= ‘sampledb1’; ]
+
+1.initdb if you installed postgresql using yum or dnf (RPM package manager) use:- this insures proper system-wide setup.
+[sudo /usr/pgsql-16/bin/postgresql-16-setup initdb]
+2. If youmanually installed postgresql from source use:- this allowscustome control over initalization.
+[initdb -D /var/lib/path/to/data/ ]
+
 ```
 ```
 PGDATA/
